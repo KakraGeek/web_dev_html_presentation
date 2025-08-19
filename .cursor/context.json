@@ -1,0 +1,15 @@
+{
+  "project": "buildwithdesmond-slides",
+  "type": "reveal.js-presentation",
+  "planningFiles": [
+    "planning/prd.md",
+    "planning/architecture-schema.md",
+    "planning/smart-prompts-tasks.md",
+    "planning/implementation.mdc"
+  ],
+  "runtime": {
+    "stack": "Vite + Reveal.js + Markdown + Custom CSS",
+    "deployment": "Vercel",
+    "devServer": "vite"
+  }
+}

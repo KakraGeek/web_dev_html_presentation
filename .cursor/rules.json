@@ -1,0 +1,14 @@
+{
+  "cycle": "notify-approve-proceed",
+  "taskGranularity": "small-steps",
+  "timeouts": "prevent",
+  "security": {
+    "owasp": true,
+    "errorHandling": "comprehensive"
+  },
+  "ui": {
+    "style": "modern",
+    "animations": true,
+    "transitions": ["fade", "slide", "convex", "zoom"]
+  }
+}

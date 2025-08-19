@@ -1,0 +1,19 @@
+# Implementation Guide (.mdc)
+
+1. Install and run:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+2. Author slides in `slides/deck.md`.
+3. Style via `styles/custom.css` (tokens, fonts, fragments).
+4. Add/verify MCP + context files.
+5. Export PDF:
+   ```bash
+   npm run export:pdf
+   ```
+6. Deploy to Vercel:
+   ```bash
+   npx vercel
+   ```

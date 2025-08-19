@@ -1,0 +1,22 @@
+name: buildwithdesmond-slides
+version: 1.0.0
+description: Reveal.js presentation project for Build With Desmond portfolio
+entry: index.html
+
+files:
+  - planning/prd.md
+  - planning/architecture-schema.md
+  - planning/smart-prompts-tasks.md
+  - planning/implementation.mdc
+  - slides/deck.md
+  - styles/custom.css
+  - index.html
+  - vite.config.js
+  - package.json
+  - vercel.json
+  - scripts/export-pdf.js
+
+rules:
+  - .cursor/rules.json
+context:
+  - .cursor/context.json

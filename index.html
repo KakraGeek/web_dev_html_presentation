@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Build with Desmond — Portfolio Slides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Reveal core CSS & theme -->
+  <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Code highlight theme -->
+  <link rel="stylesheet" href="/node_modules/reveal.js/plugin/highlight/monokai.css">
+
+  <link rel="stylesheet" href="/styles/custom.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="/slides/deck.md"
+               data-separator="^\n---\n$"
+               data-separator-vertical="^\n--\n$"
+               data-separator-notes="^Note:">
+      </section>
+    </div>
+  </div>
+
+  <script type="module">
+    import Reveal from '/node_modules/reveal.js/dist/reveal.esm.js'
+    import Markdown from '/node_modules/reveal.js/plugin/markdown/markdown.esm.js'
+    import Notes from '/node_modules/reveal.js/plugin/notes/notes.esm.js'
+    import Highlight from '/node_modules/reveal.js/plugin/highlight/highlight.esm.js'
+    import Search from '/node_modules/reveal.js/plugin/search/search.esm.js'
+    import Zoom from '/node_modules/reveal.js/plugin/zoom/zoom.esm.js'
+
+    const deck = new Reveal({
+      hash: true,
+      slideNumber: true,
+      transition: 'convex',
+      width: 1280,
+      height: 720,
+      margin: 0.06,
+      controlsTutorial: false,
+      mobile: true,
+      touch: true,
+      hideInactiveCursor: true,
+      hideCursorTime: 5000
+    })
+
+    deck.initialize({
+      plugins: [Markdown(), Notes(), Highlight(), Search(), Zoom()],
+      autoAnimate: true
+    })
+  </script>
+</body>
+</html>
