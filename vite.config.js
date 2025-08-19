@@ -13,7 +13,21 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['reveal.js']
+    include: [
+      'reveal.js',
+      'reveal.js/plugin/markdown/markdown.esm.js',
+      'reveal.js/plugin/notes/notes.esm.js',
+      'reveal.js/plugin/highlight/highlight.esm.js',
+      'reveal.js/plugin/search/search.esm.js',
+      'reveal.js/plugin/zoom/zoom.esm.js'
+    ]
   },
-  publicDir: 'public'
+  publicDir: 'public',
+  css: {
+    preprocessorOptions: {
+      css: {
+        charset: false
+      }
+    }
+  }
 })
