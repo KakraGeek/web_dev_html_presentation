@@ -1,5 +1,4 @@
 {
-  "name": "buildwithdesmond-slides",
   "version": 2,
   "builds": [
     {
@@ -10,10 +9,10 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
