@@ -5,6 +5,34 @@
   --brand-accent-2: #ff7edb;
 }
 
+/* Global mobile overrides - force Reveal.js controls to be visible */
+@media (max-width: 768px) {
+  .reveal .controls,
+  .reveal .controls:before,
+  .reveal .controls:after {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+  
+  .reveal .controls button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+  
+  .reveal .progress {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .reveal .slide-number {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
 .reveal {
   color: var(--brand-fg);
   font-family: 'Inter', 'Poppins', ui-sans-serif, system-ui;
@@ -62,32 +90,42 @@
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-  .reveal {
-    font-size: 16px !important;
+  /* Force base font size with maximum specificity */
+  html body .reveal,
+  html body .reveal .slides,
+  html body .reveal .slides section {
+    font-size: 18px !important;
   }
   
-  .reveal h1 {
-    font-size: 2.2em !important;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
+  /* Force heading sizes with maximum specificity */
+  html body .reveal h1,
+  html body .reveal .slides h1 {
+    font-size: 2.5em !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5em !important;
   }
   
-  .reveal h2 {
-    font-size: 1.8em !important;
-    line-height: 1.3;
-    margin-bottom: 0.4em;
+  html body .reveal h2,
+  html body .reveal .slides h2 {
+    font-size: 2em !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.4em !important;
   }
   
-  .reveal h3 {
-    font-size: 1.5em !important;
-    line-height: 1.4;
-    margin-bottom: 0.3em;
+  html body .reveal h3,
+  html body .reveal .slides h3 {
+    font-size: 1.7em !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.3em !important;
   }
   
-  .reveal p, .reveal li {
-    font-size: 1.1em !important;
-    line-height: 1.6;
-    margin-bottom: 0.8em;
+  html body .reveal p,
+  html body .reveal li,
+  html body .reveal .slides p,
+  html body .reveal .slides li {
+    font-size: 1.3em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.8em !important;
   }
   
   .centered {
@@ -106,46 +144,70 @@
     margin: 15px 0;
   }
   
-  /* Ensure controls are visible on mobile */
-  .reveal .controls {
+  /* Force controls to be visible with maximum specificity */
+  html body .reveal .controls,
+  html body .reveal .controls:before,
+  html body .reveal .controls:after {
     display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+  
+  html body .reveal .controls button {
+    min-height: 48px !important;
+    min-width: 48px !important;
+    font-size: 18px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  html body .reveal .progress {
+    height: 8px !important;
     opacity: 1 !important;
   }
   
-  .reveal .controls button {
-    min-height: 48px;
-    min-width: 48px;
-    font-size: 18px;
-  }
-  
-  .reveal .progress {
-    height: 6px;
+  /* Force slide numbers to be visible */
+  html body .reveal .slide-number {
+    font-size: 18px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 
 @media (max-width: 480px) {
-  .reveal {
-    font-size: 18px !important;
+  /* Force base font size with maximum specificity for small screens */
+  html body .reveal,
+  html body .reveal .slides,
+  html body .reveal .slides section {
+    font-size: 20px !important;
   }
   
-  .reveal h1 {
+  /* Force heading sizes with maximum specificity for small screens */
+  html body .reveal h1,
+  html body .reveal .slides h1 {
+    font-size: 3em !important;
+    line-height: 1.1 !important;
+  }
+  
+  html body .reveal h2,
+  html body .reveal .slides h2 {
     font-size: 2.5em !important;
-    line-height: 1.1;
+    line-height: 1.2 !important;
   }
   
-  .reveal h2 {
+  html body .reveal h3,
+  html body .reveal .slides h3 {
     font-size: 2em !important;
-    line-height: 1.2;
+    line-height: 1.3 !important;
   }
   
-  .reveal h3 {
-    font-size: 1.7em !important;
-    line-height: 1.3;
-  }
-  
-  .reveal p, .reveal li {
-    font-size: 1.2em !important;
-    line-height: 1.7;
+  html body .reveal p,
+  html body .reveal li,
+  html body .reveal .slides p,
+  html body .reveal .slides li {
+    font-size: 1.5em !important;
+    line-height: 1.7 !important;
   }
   
   .centered {
@@ -160,15 +222,36 @@
   }
   
   /* Extra large touch targets for very small screens */
-  .reveal .controls button {
-    min-height: 52px;
-    min-width: 52px;
-    font-size: 20px;
+  html body .reveal .controls button {
+    min-height: 56px !important;
+    min-width: 56px !important;
+    font-size: 22px !important;
   }
   
   /* Ensure slide content is readable */
-  .reveal .slides section {
-    padding: 20px;
+  html body .reveal .slides section {
+    padding: 25px !important;
+  }
+  
+  /* Force all controls to be visible on small screens */
+  html body .reveal .controls,
+  html body .reveal .controls:before,
+  html body .reveal .controls:after {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+  
+  html body .reveal .progress {
+    height: 10px !important;
+    opacity: 1 !important;
+  }
+  
+  html body .reveal .slide-number {
+    font-size: 20px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 
